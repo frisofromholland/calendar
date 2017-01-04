@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://www.w3.org/1999/xhtml">
+<body>
+<wicket:extend>
+    <h2>Zoeken op geboortemaand</h2>
+
+    <form wicket:id="form">
+        <p><label>Geboortemaand</label><select wicket:id="birthMonthDropdown"/></p><br/>
+
+        <p><input type="submit" value="Zoek persoon op geboortemaand"></p>
+    </form>
+
+    <br/>
+
+    <div wicket:id="searchResultList">
+        <span wicket:id="link">
+            <span wicket:id="label"></span>
+        </span><br/><br/>
+    </div>
+
+    <div wicket:id="feedback"/>
+</wicket:extend>
+</body>
+</html>

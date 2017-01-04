@@ -1,0 +1,79 @@
+/* GENERAL */
+
+body {
+    color: #393F51;
+    font-size: 1.2em;
+}
+
+/* GENERAL FORMS */
+
+form {
+    display: table;
+}
+
+form p {
+    display: table-row;
+}
+
+form label {
+    display: table-cell;
+    padding: 6px;
+}
+
+form input {
+    display: table-cell;
+    padding: 6px;
+}
+
+/* HEADER */
+#header {
+    background-color: #00698c;
+    text-align: center;
+    border-style: none none groove none;
+    padding: 3px;
+    width: 100%;
+    top: 0;
+    clear: both;
+    position: fixed;
+}
+
+/* MENU/ NAV BAR */
+#menuList {
+    border-style: none groove none none;
+    line-height: 50px;
+    width: 15%;
+    min-height: 600px;
+    float: left;
+    padding: 3px;
+    padding-top: 80px;
+    list-style-type: none;
+}
+
+#menuList a {
+    display: block;
+    text-decoration: none;
+}
+
+#menuList a:hover {
+    background-color: #1a1a00;
+    color: white;
+}
+
+/* BODY */
+#body {
+    float: left;
+    padding-top: 80px;
+    padding-left: 50px;
+}
+
+/* FOOTER */
+#footer {
+    background-color: #99ffff;
+    border-style: groove none none none;
+    clear: both;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}

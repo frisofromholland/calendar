@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://www.w3.org/1999/xhtml">
+<wicket:link>
+    <link rel="stylesheet" type="text/css" href="../../CalendarStyle.css"/>
+</wicket:link>
+
+<body>
+<wicket:extend>
+    <h2><label>Nieuwe geboortedatum</label></h2>
+
+    <form wicket:id="form">
+        <p><label>Voornaam*</label><input wicket:id="firstName" type="text" size="20"/></p>
+
+        <p><label>Achternaam* </label><input wicket:id="lastName" type="text" size="20"/></p>
+
+        <p><label>Geboortedatum(dd-mm-jjjj)*</label><input wicket:id="dateOfBirth" type="text" size="8"/></p>
+        <br/>
+
+        <p><input type="submit" value="opslaan"></p>
+    </form>
+
+    <div wicket:id="feedback"/>
+
+</wicket:extend>
+</body>
+</html>
