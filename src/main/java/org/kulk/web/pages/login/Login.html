@@ -6,16 +6,24 @@
 
 <body>
 
+<div id="header" wicket:id="headerPanel"></div>
 
-<h2><label>Inloggen</label></h2>
 
-<form method="POST" action="login">
-    <label for="name">Gebruikersnaam</label>
-    <input id="name" name="username" type="text"/>
-    <label for="pass">Wachtwoord</label>
-    <input id="pass" name="password" type="password"/>
-    <input id="submit" type="submit" value="Log in">
-</form>
+<div id="body">
+
+    <h2><label>Inloggen</label></h2>
+
+    <form method="POST" action="login">
+
+        <p><label for="name">Gebruikersnaam</label> <input id="name" name="username" type="text"/></p>
+
+        <p><label for="pass">Wachtwoord</label> <input id="pass" name="password" type="password"/></p>
+
+        <p><input id="submit" type="submit" value="Log in"></p>
+
+    </form>
+
+</div>
 
 </body>
 </html>
