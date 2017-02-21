@@ -3,6 +3,7 @@ package org.kulk.application;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.kulk.web.HomePage;
+import org.kulk.web.pages.login.Login;
 
 public class CalendarApplication extends WebApplication {
 
@@ -16,6 +17,7 @@ public class CalendarApplication extends WebApplication {
     protected void init() {
 
 	super.init();
+	mountPage("/login", Login.class);
 	getComponentInstantiationListeners().add(new SpringComponentInjector(this));
 
     }

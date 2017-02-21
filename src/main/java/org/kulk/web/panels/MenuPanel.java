@@ -6,6 +6,7 @@ import org.kulk.web.HomePage;
 import org.kulk.web.pages.edit.CreatePersonPage;
 import org.kulk.web.pages.search.SearchByDatePage;
 import org.kulk.web.pages.search.SearchByNamePage;
+import org.kulk.web.pages.user.UserManagementPage;
 
 /**
  * Created by gebruiker on 22-12-2015.
@@ -20,6 +21,7 @@ public class MenuPanel extends Panel {
 	add(new BookmarkablePageLink("searchByName", SearchByNamePage.class));
 	add(new BookmarkablePageLink("searchByMonthOfBirth", SearchByDatePage.class));
 	add(new BookmarkablePageLink("createPerson", CreatePersonPage.class));
+	add(new BookmarkablePageLink("userManagement", UserManagementPage.class));
 
     }
 

@@ -12,6 +12,7 @@ import org.kulk.db.entities.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.dao.support.PersistenceExceptionTranslator;
 import org.springframework.orm.hibernate4.HibernateExceptionTranslator;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -29,6 +30,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan({ "org.kulk" })
+@Import({ SecurityConfig.class })
 public class PersistenceConfig {
 
     public PersistenceConfig() {
@@ -62,7 +64,7 @@ public class PersistenceConfig {
 	return jpaVendorAdapter;
     }
 
-    @Bean
+    @Bean(name = "dataSource")
     public DataSource dataSource() {
 	final BasicDataSource dataSource = new BasicDataSource();
 
