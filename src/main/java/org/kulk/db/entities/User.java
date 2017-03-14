@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -25,7 +27,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
+@NamedQueries({
+    @NamedQuery(name = "User.findByName", query = "SELECT u FROM User u WHERE u.userName = ?1"),
+})
 public class User {
+
+    public static final String FIND_BY_NAME = "User.findByName";
 
     @Id
     @Column

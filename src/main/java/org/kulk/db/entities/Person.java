@@ -25,7 +25,7 @@ import static org.kulk.db.entities.Person.FIND_BY_ID;
  * Created by gebruiker on 15-11-2015.
  */
 @Entity
-@Table(name = "Person")
+@Table(name = "person")
 @Getter
 @Setter
 @NoArgsConstructor

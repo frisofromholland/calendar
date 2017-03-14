@@ -47,8 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	    //.antMatchers("/**").access("hasRole('ROLE_USER')")
 	    	/*.anyRequest()
 	    	.authenticated()*/
-	    .antMatchers("/*").hasRole("USER")
-	    .antMatchers("/wicket/bookmarkable/org.kulk.web.pages.search..CreatePersonPage").hasRole("ADMIN")
+	    .antMatchers("/*").hasAnyRole("USER", "ADMIN", "ROOT")
 	    .and()
 	    .formLogin()
 	    .usernameParameter("username")
@@ -58,6 +57,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	    //.failureUrl("/?error=denied")
 	    .defaultSuccessUrl("/", true)
 	    .permitAll()
+	    .
+		and().logout().    //logout configuration
+	    logoutUrl("/wicket/bookmarkable/org.kulk.web.pages.logout.Logout")
+	    .logoutSuccessUrl("/login?logout=true")
 	    .and()
 	    .csrf()
 	    .disable();

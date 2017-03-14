@@ -2,6 +2,7 @@ package org.kulk.service;
 
 import java.util.List;
 
+import org.kulk.db.entities.Role;
 import org.kulk.db.entities.User;
 
 /**
@@ -18,6 +19,8 @@ public interface UserService {
     User getSingleUserByNameAndPassword(String userName, String password);
 
     List<User> getUsersByRole(String roleName);
+
+    List<Role> allRoles();
 
 
 }

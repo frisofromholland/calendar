@@ -6,7 +6,8 @@ package org.kulk.db.enums;
  * Time: 10:00 AM
  */
 public enum RoleType {
-    ADMIN,
+    ROLE_ADMIN,
     ROLE_USER,
+    ROLE_ROOT,
     ALL
 }
